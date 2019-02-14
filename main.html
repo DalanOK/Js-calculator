@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+	<link rel="stylesheet" href="animate.css">
+</head>
+<body>
+	<form>
+		Number 1: <input type="text" id="num1"><br>
+		Number 2: <input type="text" id="num2"><br>
+		<select id="operator">
+			<option value="add">plus</option>
+			<option value="min">minus</option>
+			<option value="div">Divide</option>
+			<option value="mul">Multiply</option>
+			<option value="power">Power</option>
+		</select>
+		<div class="btn-pos">		
+			<div class="pulse1" onclick="calc()">
+				<div class="bloc"></div>
+				<div class="calcu"><i class="fas fa-calculator" id="img"></i></div>
+				<div class="text">Calculate</div>
+			</div>
+		</div>
+	</form>
+
+	<div id="result">Result</div>
+
+	<script src="cod.js"></script>
+</body>
+</html>

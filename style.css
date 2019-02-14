@@ -1,0 +1,111 @@
+form{
+    margin-top: 25%;
+	margin-left: 40%;
+}
+input{
+	margin-top: 5px;
+	padding: 5px;
+	border-radius: 5px ;
+	border: 1px solid gray;
+}
+body{
+	background-image: url(img/2d0f796f4655baeca812ed1b7af9abf7.jpg);
+	background-size: cover;
+}
+#result{
+	margin-left: 40%;
+}
+#operator{
+	padding: 5px;
+	border-radius: 5px;
+}
+.btn-pos{
+	position: absolute;
+	margin-left: 13%;
+	margin-top:-1%;
+}
+.pulse1,.bloc,.calcu{
+	position: absolute;
+	height: 60px;
+	width: 60px;
+	text-align: center;
+	border-radius: 50%;
+	color: #fff;
+}
+.bloc{
+ cursor: pointer;
+ z-index: 1;
+ overflow: hidden;
+}
+.pulse1{
+	background-color: #5CC2E2;
+	position: relative;
+	transition: .5s;
+}
+.calcu{
+	line-height: 60px;
+	font-size: 35px;
+	animation: calcu .9s ease-in-out infinite;
+}
+.text{
+	position: absolute;
+	opacity: 0;
+	top: 20px;
+	font-size: 15px;
+	font-weight: bold;
+	transform: scaleX(-1);
+    transition: .5s ease-in-out;
+}
+.calcu i{
+	transition: 0.5s ease-in-out;
+}
+.pulse1:hover{
+	background: #29AEE3;;
+}
+.pulse1:hover i {
+  transition: 0.5s ease-in-out; 
+  transform: scale(0);
+}
+.pulse1:hover .text{
+	transform: scale(1);
+	transition: 0.5s ease-in-out;
+	opacity: 1;
+}
+.pulse1:hover::before,    /*!*/
+.pulse1:hover::after {
+ content: '';             /*!*/
+ position: absolute;
+ border: 1px solid #29AEE3;
+ left: -10px;
+ right: -10px;
+ top: -10px;
+ bottom: -10px;
+ border-radius: 50%;
+ animation: pulsee 2s linear infinite;
+ opacity: 0;
+}
+.pulse1:hover::after {
+ animation-delay: .5s;     /*!*/
+}
+
+@keyframes calcu {
+ 0%, 100% {
+  transform: rotate(-20deg);
+ }
+ 50% {
+  transform: rotate(21deg);
+ }
+}
+@keyframes pulsee {
+ 0% {
+  transform: scale(0.5);
+  opacity: 0;
+ }
+ 50% {
+  opacity: 1;
+ }
+ 100% {
+  transform: scale(1.2);
+  opacity: 0;
+ }
+}
